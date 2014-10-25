@@ -46,7 +46,8 @@ There are 5 parts:
 ## Variables
 
 - subject: 1 to 30 each representing a participant in the study
-- activityid: the activity that the subject was doing at the time of the measurement
+- activityid: activity id that the subject was doing at the time of the measurement
+- activity: description of activity
 - time.BodyAcc.mean.X
 - time.BodyAcc.mean.Y
 - time.BodyAcc.mean.Z
