@@ -1,11 +1,11 @@
-Cleaning_Getting_Data
+# Cleaning_Getting_Data
 
-Assignment Submission Files
+## Assignment Submission Files
 - run_analysis.R
 - README.md
 - CookBook.md
  
-Instructions
+## Instructions
 
 - 1) Download the data set, https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 - 2) Unzip the data set into your current working directory and you should see a folder named UCI HAR Dataset
@@ -15,6 +15,6 @@ Instructions
     - a) tidy_mean.txt: tidy data set with the average of each variable for each activity and each subject
     - b) tidy.txt: tidy data set
 
-Dependencies
+## Dependencies
 
 The R script assumes you have 'data.table' installed using install.packages("data.table") and 'reshape2' installed using install.packages("reshape2").
