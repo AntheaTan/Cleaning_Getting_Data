@@ -21,20 +21,20 @@ activity <- read.table("UCI HAR Dataset/activity_labels.txt", header = FALSE, co
 test_sub <- read.table("UCI HAR Dataset/test/subject_test.txt",header = FALSE, col.names=c("subject"))
 test_set <- read.table("UCI HAR Dataset/test/x_test.txt",header = FALSE, col.names=feature[,2])
 test_id <- read.table("UCI HAR Dataset/test/y_test.txt",header = FALSE, col.names=c("activityid"))
-test_data <- cbind(test_sub, test_id, test_set )
 
 ## Read TRAIN file
 ## 4. Appropriately labels the data set with descriptive variable names. 
 train_sub <- read.table("UCI HAR Dataset/train/subject_train.txt",header = FALSE, col.names=c("subject"))
 train_set <- read.table("UCI HAR Dataset/train/x_train.txt",header = FALSE, col.names=feature[,2])
 train_id <- read.table("UCI HAR Dataset/train/y_train.txt",header = FALSE, col.names=c("activityid"))
-train_data <- cbind(train_sub, train_id, train_set )
 
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-test_data <- test_data[,reqfeature]
-train_data <- train_data[,reqfeature]
+test_set <- test_set[,reqfeature]
+train_set <- train_set[,reqfeature]
 
 ## 1. Merges the training and the test sets to create one data set.
+train_data <- cbind(train_sub, train_id, train_set )
+test_data <- cbind(test_sub, test_id, test_set )
 tidy <- rbind(test_data,train_data)
 
 ## 3. Uses descriptive activity names to name the activities in the data set.
